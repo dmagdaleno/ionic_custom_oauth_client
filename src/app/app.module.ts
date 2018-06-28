@@ -8,7 +8,7 @@ import { NgxErrorsModule } from '@ultimate/ngxerrors';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
-import { ValidAuthProvider } from '../providers/valid-auth/valid-auth';
+import { AuthService } from '../services/auth.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ import { ValidAuthProvider } from '../providers/valid-auth/valid-auth';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ValidAuthProvider
+    AuthService
   ]
 })
 export class AppModule {}
